@@ -1,0 +1,6 @@
+<h1>Push notification demo !!!</h1>
+
+<div class="notification" [ngClass]="{ show: showNotification }">
+  <span class="message">{{ notificationMessage }}</span>
+  <button class="close" (click)="closeNotification()">&times;</button>
+</div>

@@ -28,6 +28,9 @@ export class AppComponent {
     this.swPush.messages.subscribe((message: any) => {
       this.show(message.notification.title);
     });
+    this.swPush.notificationClicks.subscribe(({ action, notification }) => {
+      window.open(notification.data.url);
+    });
   }
 
   pushSubscription() {
